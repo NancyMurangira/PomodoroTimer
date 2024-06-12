@@ -17,7 +17,7 @@ body {
   
   body.dark {
     /* background-color: rgb(4, 4, 83); */
-    background-image: url('background.jpg');
+    background-image: url('blackbackground.jpg');
     color: #f2f3f4;
     /* box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5); */
     /* background-repeat: no-repeat;
@@ -239,7 +239,7 @@ body {
     display: flex;
   }
   
-  /* For smaller screens */
+  
   @media (max-width: 768px) {
     body {
       font-size: 24px;
