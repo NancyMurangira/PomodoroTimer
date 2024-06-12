@@ -67,6 +67,9 @@ function startTimer() {
     }, 1000);
     document.getElementById('start-pause').innerHTML =
       '<i class="fas fa-pause"></i>';
+      if (!isWorkTime) {
+        shortBreakSound.play();
+      }   
   }
 }
 function pauseTimer() {
@@ -75,6 +78,9 @@ function pauseTimer() {
     clearInterval(timer);
     document.getElementById('start-pause').innerHTML =
       '<i class="fas fa-play"></i>';
+      if (!isWorkTime) {
+        shortBreakSound.pause();
+      }
   }
 }
 function startShortBreak() {
@@ -85,7 +91,7 @@ function startShortBreak() {
     updateTimerDisplay(breakMinutes, 0);
     updateProgressCircle(breakMinutes * 60, breakMinutes * 60);
     highlightCurrentMode();
-    shortBreakSound.play(); // Play sound when short break starts
+    // shortBreakSound.play(); // Play sound when short break starts
   }
 }
 function startWorkTimer() {
