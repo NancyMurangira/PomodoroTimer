@@ -137,6 +137,12 @@ function closeModal() {
   document.getElementById('settings-modal').style.display = 'none';
 }
 function saveSettings() {
+  const workTime = document.getElementById('work-time').value;
+  const breakTime = document.getElementById('break-time').value;
+  if (!workTime || !breakTime){
+    alert('Please select both work and break time');
+    return
+  }
   updateTimes();
   closeModal();
 }
